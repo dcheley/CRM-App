@@ -1,4 +1,4 @@
-require relative 'contact'
+require_relative 'contact'
 require 'sinatra'
 
 #Fake data
