@@ -2,9 +2,9 @@ require_relative 'contact'
 require 'sinatra'
 
 #Fake data
-Contact.create('John', 'Google', 'test@email.com', 'Unemployed')
-Contact.create('Luis', 'Bon', 'imagine@something.com', 'Fire Fighter')
-Contact.create('Monique', 'Camarino', 'email@hotmail.com', 'Waitress')
+#Contact.create('John', 'Google', 'test@email.com', 'Unemployed')
+#Contact.create('Luis', 'Bon', 'imagine@something.com', 'Fire Fighter')
+#Contact.create('Monique', 'Camarino', 'email@hotmail.com', 'Waitress')
 
 
   get '/' do
@@ -19,4 +19,9 @@ Contact.create('Monique', 'Camarino', 'email@hotmail.com', 'Waitress')
 
   get '/contacts/new' do
     erb :new_contact
+  end
+
+  post '/contacts' do
+    Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+    redirect to('/contacts')
   end
