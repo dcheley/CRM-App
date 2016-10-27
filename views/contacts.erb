@@ -5,11 +5,12 @@
   </head>
 
   <body>
-    <h1>All Contacts</h1>
+    <h1>Contact List</h1>
     <ul>
       <% Contact.all.each do |contact| %>
       <li><%= contact.first_name %> <%= contact.last_name %></li>
       <% end %>
     </ul>
+
   </body>
 </html>

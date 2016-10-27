@@ -1,0 +1,30 @@
+* {
+  margin: 20;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 20;
+  font-family: helvetica;
+  color: white
+}
+
+ul {
+  background-color: white;
+  width: 400px;
+  border-radius: 50px;
+  padding-top: 2px;
+  padding-left: 35px;
+  text-align: left;
+}
+
+p {
+  margin: 20;
+  font-family: arial-black;
+  color: white;
+}
+
+body {
+  background-color: rgb(25, 25, 112);
+}
