@@ -2,7 +2,7 @@ require_relative 'contact'
 require 'sinatra'
 
 #Fake data, implementing one contact so id = 1 exists
-Contact.create('John', 'Google', 'test@email.com', 'Unemployed')
+#Contact.create('John', 'Google', 'test@email.com', 'Unemployed')
 #Contact.create('Luis', 'Bon', 'imagine@something.com', 'Fire Fighter')
 #Contact.create('Monique', 'Camarino', 'email@hotmail.com', 'Waitress')
 
@@ -51,6 +51,16 @@ Contact.create('John', 'Google', 'test@email.com', 'Unemployed')
       @contact.last_name = params[:last_name]
       @contact.email = params[:email]
       @contact.note = params[:note]
+      redirect to ('/contacts')
+    else
+      raise Sinatra::NotFound
+    end
+  end
+
+  delete '/contacts/:id' do
+    @contact = Contact.find(params[:id].to_i)
+    if @contact
+      @contact.delete
       redirect to ('/contacts')
     else
       raise Sinatra::NotFound
