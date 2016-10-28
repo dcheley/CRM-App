@@ -31,9 +31,9 @@ attr_accessor :first_name, :last_name, :email, :note
   # This method should accept an id as an argument
   # and return the contact who has that id
   def self.find(id)
-   @@contacts.find do |contact|
-     contact.id == id.to_i
-     end
+    @@contacts.find do |contact| #returns first element found in block (Array)
+    contact.id == id.to_i
+    end
   end
 
   def self.find_first_name(first_name)
