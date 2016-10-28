@@ -25,7 +25,34 @@ Contact.create('John', 'Google', 'test@email.com', 'Unemployed')
     redirect to('/contacts')
   end
 
-  get '/contacts/1' do
-    @contact = Contact.find(1)
-    erb :show_contact
+  get '/contacts/:id' do
+    @contact = Contact.find(params[:id].to_i)
+    if @contact
+      erb :show_contact
+    else
+      raise Sinatra::NotFound
+    end
+  end
+
+
+  get '/contacts/:id/edit' do
+    @contact = Contact.find(params[:id].to_i)
+    if @contact
+      erb :edit_contact
+    else
+      raise Sinatra::NotFound
+    end
+  end
+
+  put '/contacts/:id' do
+    @contact = Contact.find(params[:id].to_i)
+    if @contact
+      @contact.first_name = params[:first_name]
+      @contact.last_name = params[:last_name]
+      @contact.email = params[:email]
+      @contact.note = params[:note]
+      redirect to ('/contacts')
+    else
+      raise Sinatra::NotFound
+    end
   end
