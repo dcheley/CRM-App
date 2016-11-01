@@ -8,7 +8,7 @@ require 'sinatra'
 
   get '/' do
     @crm_app_name = "Daniel's CRM"
-    @server_time = Time.now
+    #@server_time = Time.now
     erb :index
   end
 
@@ -21,7 +21,12 @@ require 'sinatra'
   end
 
   post '/contacts' do
-    Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+    contact = Contact.create(
+    first_name: params[:first_name],
+    last_name: params[:last_name],
+    email: params[:email],
+    note: params[:note]
+    )
     redirect to('/contacts')
   end
 
@@ -45,7 +50,7 @@ require 'sinatra'
   end
 
   put '/contacts/:id' do
-    @contact = Contact.find(params[:id].to_i)
+    @contact = Contact.find(params[:id])
     if @contact
       @contact.first_name = params[:first_name]
       @contact.last_name = params[:last_name]
