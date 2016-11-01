@@ -4,10 +4,15 @@
     <title>Contact List</title>
   </head>
   <body>
-    <h1>Contact List</h1>
+    <h2>Contact List</h2>
+    <div id="total_contacts"
+      There are <b><span id = "total"><%=Contact.all.count%></span></b> contacts
+    </div>
       <% Contact.all.each do |contact| %>
-      <h2><a href="/contacts/<%=contact.id%>"><%= contact.first_name %> <%= contact.last_name %></a></h2>
-      <h4><a href="/contacts/<%=contact.id%>/edit">Edit</a>  <a href="/contacts/<%=contact.id%>">Delete</a></h4>
+      <div class="contacts">
+      <h3><a href="/contacts/<%=contact.id%>"><%= contact.first_name %> <%= contact.last_name %></a></h3>
+      <h5><a href="/contacts/<%=contact.id%>/edit">Edit</a> <a href="/contacts/<%=contact.id %>">Delete</a></h5>
+      </div>
       <% end %>
   </body>
 </html>

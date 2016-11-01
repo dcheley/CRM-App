@@ -4,7 +4,9 @@
     <title>CRM App</title>
   </head>
   <body>
-    <h1>Welcome to <%=@crm_app_name %>!</h1>
-    <p>Choose from the menu options below:</p>
+    <h2>Welcome to <%=@crm_app_name %>!</h2>
+    <div id="total_contacts">
+      <b><span id = "total">There are <%=Contact.all.count%> total contacts</span></b>
+    </div>
   </body>
 </html>

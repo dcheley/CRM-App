@@ -5,11 +5,23 @@
     <meta charset="utf-8">
   </head>
   <body>
+    <div id="block">
+    <header>
+      <div id="top">
+        <h1>Cheley's CRM App</h1>
+      </div>
+      <ul>
+       <div class="nav_options">
+         <li><a href="/">Main Menu</a></li>
+      </div>
+      <div class="nav_options">
+         <li><a href="/contacts">View all contacts</a></li>
+      </div>
+      <div class="nav_options">
+         <li><a href="/contacts/new">Add contact</a></li>
+      </div>
+      </ul>
+  </header>
       <%= yield %>
-    <ul>
-     <li><a href="/">Main Menu</a></li>
-     <li><a href="/contacts">View all contacts</a></li>
-     <li><a href="/contacts/new">Add contact</a></li>
-    </ul>
   </body>
 </html>

@@ -1,46 +1,112 @@
 * {
-  margin: 200;
-  padding: 0;
   box-sizing: border-box;
 }
 
-h1 {
-  margin: 20;
-  font-family: sans-serif;;
-  color: white
+#block {
+  margin: auto;
+  background-color: white;
+  width: 700px;
 }
 
-ul {
-  background-color: white;
-  width: 600px;
-  border-radius: 50px;
-  padding-top: 2px;
-  padding-left: 35px;
-  text-align: left;
-  list-style-type: circle;
+.contacts {
+  background-color: #00e1d1;
+  width: 650px;
+  margin: auto;
+  margin-bottom: 5px;
+  text-align: center;
 }
+
+.contacts h3 {
+  padding-top: 5px;
+}
+.contacts h5 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  padding: 5px;
+}
+
+#total_contacts {
+  width: 650px;
+  background-color: #E9967A;
+  margin: auto;
+  padding: 10px;
+  padding-left: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#input_options {
+  width: 650px;
+  margin: auto;
+  background-color: #E9967A;
+  padding-left: 10px;
+}
+
+#input_options input {
+background-color: darkgrey;
+border: 5px;
+}
+
+label {
+
+}
+
+#top {
+  height: 60px;
+  background-color: black;
+}
+
+#top h1 {
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.nav_options li {
+  list-style-type: none;
+  border: white solid 1px;
+  padding: 5px;
+}
+
+.nav_options a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+.nav_options {
+  background-color: darkgrey;
+  text-align: center;
+}
+
+header ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+h2 {
+  padding-top: 0px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
 
 p {
   margin: 20;
   font-family: sans-serif;
-  color: white;
   /*-- background-color: white;
        font-weight: bold; --*/
 }
 
-body {
-  background-color: rgb(25, 25, 112);
-}
-
 input {
-  border-radius: 30px;
-  border-top: 10px;
-  border-color: white;
+  border-radius: 45px;
 }
-
-ol {
-  background-color: white;
-  width: 600px;
-  border-radius: 40px;
-  padding-left: 40px;
-}
+/*-- body {
+} */
