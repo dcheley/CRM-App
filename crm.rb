@@ -66,3 +66,7 @@ require 'sinatra'
       raise Sinatra::NotFound
     end
   end
+
+  after do
+    ActiveRecord::Base.connection.close
+  end
