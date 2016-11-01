@@ -6,7 +6,7 @@
   </head>
   <body>
     <h2>Edit <%= @contact.first_name %> <%= @contact.last_name %>'s information below</h2>
-    <div id="input_options">
+    <div id="edit_options">
     <form action='/contacts/<%= @contact.id %>' method='post'>
       <input type='hidden' name='_method' value='put'>
     <label for='first_name'>First Name:</label>
@@ -21,8 +21,10 @@
     <label for='note'>Note:</label>
       <input type='text' name='note' value ='<%= @contact.note %>'>
     <br>
-      <input type='submit' value='Edit Contact'>
-    </form>
     </div>
+    <div id="edit_button">
+      <input type='submit' value='Edit Contact'>
+    </div>
+    </form>
   </body>
 </html>

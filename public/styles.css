@@ -41,20 +41,52 @@
   font-weight: bold;
 }
 
-#input_options {
+#edit_options {
   width: 650px;
   margin: auto;
   background-color: #E9967A;
   padding-left: 10px;
+  text-align: center;
 }
 
-#input_options input {
-background-color: darkgrey;
-border: 5px;
+#edit_options label {
+  color: white;
+  font-weight: bold;
 }
 
-label {
+#edit_options input {
+  border-radius: 45px;
+  margin: 5px;
+  text-indent: 10px;
+}
 
+#edit_button {
+  width: 80px;
+  margin: auto;
+}
+
+#create_options {
+  width: 650px;
+  margin: auto;
+  background-color: #E9967A;
+  padding-left: 10px;
+  text-align: center;
+}
+
+#create_options label {
+  color: white;
+  font-weight: bold;
+}
+
+#create_options input {
+  border-radius: 45px;
+  margin: 5px;
+  text-indent: 10px;
+}
+
+#create_button {
+  width: 80px;
+  margin: auto;
 }
 
 #top {
@@ -92,21 +124,22 @@ header ul {
 }
 
 h2 {
-  padding-top: 0px;
+
   font-family: sans-serif;
   text-align: center;
 }
 
 
 p {
-  margin: 20;
+  width: 650px;
+  margin: auto;
+  padding-bottom: 15px;
   font-family: sans-serif;
+  text-align: center;
   /*-- background-color: white;
        font-weight: bold; --*/
 }
 
-input {
-  border-radius: 45px;
-}
+
 /*-- body {
 } */
