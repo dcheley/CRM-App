@@ -39,7 +39,6 @@ require 'sinatra'
     end
   end
 
-
   get '/contacts/:id/edit' do
     @contact = Contact.find(params[:id].to_i)
     if @contact
